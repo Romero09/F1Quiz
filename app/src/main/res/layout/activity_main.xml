@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.f1quiz.MainActivity">
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#EEEEEE">
+
+    <ImageView
+        android:id="@+id/f1pic"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:src="@drawable/f1pic"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        />
+
+
+    <LinearLayout
+        android:layout_below="@id/f1pic"
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="serif"
+            android:text="Formula 1 Quiz - test your knowledge of 2016"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="22sp" />
+
+        <TextView
+            style="@style/questionStyle"
+            android:text="Question 1:" />
+
+        <TextView
+            style="@style/questionText"
+            android:text="Lewis Hamilton and Nico Rosberg respectively led the most laps this season – but who was third on the list? " />
+
+        <RadioGroup
+            android:id="@+id/radio1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radio_max"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Max Verstappen"/>
+
+            <RadioButton
+                android:id="@+id/radio_fer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fernando Alonso"/>
+
+            <RadioButton
+                android:id="@+id/radio_seb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sebastian Vettel"/>
+
+        </RadioGroup>
+
+        <TextView
+            style="@style/questionStyle"
+            android:text="Question 2:" />
+
+        <TextView
+            style="@style/questionText"
+            android:text="He is just a very frustrated guy, shouting on the radio like a child.” Who said it – and about whom?" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Who?"
+                    android:textColor="@android:color/black" />
+
+                <CheckBox
+                    android:id="@+id/box_nico"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Nico Rosberg"/>
+
+                <CheckBox
+                    android:id="@+id/box_fer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Fernando Alonso"/>
+
+                <CheckBox
+                    android:id="@+id/box_max"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Max Verstappen"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About whom?"
+                    android:textColor="@android:color/black" />
+
+                <CheckBox
+                    android:id="@+id/box_fel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Felippe Massa"
+                    />
+
+                <CheckBox
+                    android:id="@+id/box_seb"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sebastian Vettel"/>
+
+                <CheckBox
+                    android:id="@+id/box_dan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Daniel Ricciardo"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/questionStyle"
+            android:text="Question 3:" />
+
+        <TextView
+            style="@style/questionText"
+            android:text="Jenson Button’s decision to step away from F1 racing in 2017 means he will not be competing for the first time in 17 years. Can you name his team, for his Grand Prix debut back in 2000?" />
+
+        <EditText
+            android:id="@+id/question_3_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:hint="Name of the team"
+            android:inputType="textCapSentences"
+            android:maxLines="2" />
+
+        <TextView
+            style="@style/questionStyle"
+            android:text="Question 4:" />
+
+        <TextView
+            style="@style/questionText"
+            android:text="Which driver claimed the most consecutive points finishes in 2016??" />
+
+        <RadioGroup
+            android:id="@+id/radio2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_ham"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Lewis \nHamilton" />
+
+            <RadioButton
+                android:id="@+id/radio_ric"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Daniel \nRicciardo" />
+
+            <RadioButton
+                android:id="@+id/radio_rai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Kimi \nRaikkonen" />
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/main_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="submit"
+        android:textAllCaps="true"
+        android:onClick="submit"/>
+
+    <ImageView
+        android:layout_below="@id/submit_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/f1logo"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        />
+
+
+</RelativeLayout>
+
+
+
+</ScrollView>
